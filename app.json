@@ -1,0 +1,12 @@
+{
+  "name": "securitysystem",
+  "displayName": "securitysystem",
+  "expo": {
+    "name": "securitysystem",
+    "slug": "securitysystem",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
