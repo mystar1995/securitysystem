@@ -1,9 +1,8 @@
 import React from 'react'
-import {View,StatusBar, TabBarIOS} from 'react-native'
 import {createStackNavigator} from '@react-navigation/stack'
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import {Login,Signup,Forgot,Home,CameraDetail,ScreenControl,Notification, AlarmDetail,Directive,Chat,Chating,Setting} from './pages'
+import {Login,Signup,Forgot,Home,CameraDetail,ScreenControl,Notification, AlarmDetail,Directive,Chat,Chating,Setting,AddDevice,MemberShip} from './pages'
 import TabBar from './components/Tabbar'
 
 const Tab = createBottomTabNavigator()
@@ -38,6 +37,8 @@ function Dashboard()
                 <DashboardStack.Screen name="ScreenControl" component={ScreenControl} options={{header:()=>null}}></DashboardStack.Screen>
                 <DashboardStack.Screen name="AlarmDetail" component={AlarmDetail} options={{header:()=>null}}></DashboardStack.Screen>
                 <DashboardStack.Screen name="Chating" component={Chating} options={{header:()=>null}}></DashboardStack.Screen>
+                <DashboardStack.Screen name="AddDevice" component={AddDevice} options={{header:()=>null}}></DashboardStack.Screen>
+                <DashboardStack.Screen name="MemberShip" component={MemberShip} options={{header:()=>null}}></DashboardStack.Screen>
             </DashboardStack.Navigator>
     )
 }

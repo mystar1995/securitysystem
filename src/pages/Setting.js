@@ -3,7 +3,7 @@ import {View,ScrollView,StyleSheet, TouchableOpacity,Switch,Text,Image} from 're
 import {RFValue} from 'react-native-responsive-fontsize'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-export default function Setting()
+export default function Setting({navigation})
 {
     return (
         <View style={style.container}>
@@ -17,7 +17,7 @@ export default function Setting()
                     <Text style={style.title}>Camera Management</Text>
                     <View style={[style.itemcontainer,{borderBottomColor:'#DADADA',borderBottomWidth:1}]}>
                         <Text style={style.itemtitle}>Add Device</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=>navigation.navigate('AddDevice')}>
                             <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
                         </TouchableOpacity>
                     </View>
@@ -38,7 +38,7 @@ export default function Setting()
                         <Text style={style.itemtitle}>MemberShip</Text>
                         <View style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
                             <Text style={style.value}>Active</Text>
-                            <TouchableOpacity style={{marginLeft:15}}>
+                            <TouchableOpacity style={{marginLeft:15}} onPress={()=>navigation.navigate('MemberShip')}>
                                 <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
                             </TouchableOpacity>
                         </View>
