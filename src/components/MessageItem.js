@@ -33,17 +33,17 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'SFProDisplay-Semibold',
         color:'#424347',
-        fontSize:RFValue(14,500)
+        fontSize:RFValue(14,580)
     },
     description:{
         fontFamily:'SFProDisplay-Regular',
         color:'#BBBBBB',
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         marginTop:10
     },
     time:{
         fontFamily:'SFProDisplay-Regular',
         color:'#BBBBBB',
-        fontSize:RFValue(9,500)
+        fontSize:RFValue(9,580)
     }
 })

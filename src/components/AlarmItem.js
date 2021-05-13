@@ -29,19 +29,19 @@ const style = StyleSheet.create({
         height:wp('26.818')
     },
     title:{
-        fontSize:RFValue(20,500),
+        fontSize:RFValue(20,580),
         color:'black',
         fontFamily:'Avenir Medium'
     },
     action:{
         color:'#E50914',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Medium',
         marginTop:23
     },
     time:{
         fontFamily:'AvenirLTStd-Book',
         color:'#979797',
-        fontSize:RFValue(14,500)
+        fontSize:RFValue(14,580)
     }
 })

@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {View,ScrollView,StyleSheet, TouchableOpacity,Switch,Text,Image} from 'react-native'
 import {RFValue} from 'react-native-responsive-fontsize'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 export default function Setting({navigation})
 {
+    const [data,setdata] = useState({connect:false,download:false,motion:false})
     return (
         <View style={style.container}>
             <View style={style.header}>
@@ -18,20 +19,20 @@ export default function Setting({navigation})
                     <View style={[style.itemcontainer,{borderBottomColor:'#DADADA',borderBottomWidth:1}]}>
                         <Text style={style.itemtitle}>Add Device</Text>
                         <TouchableOpacity onPress={()=>navigation.navigate('AddDevice')}>
-                            <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
+                            <AntDesign name="right" size={RFValue(16,580)} color="black"></AntDesign>
                         </TouchableOpacity>
                     </View>
                     <View style={style.itemcontainer}>
                         <Text style={style.itemtitle}>Edit Device</Text>
                         <TouchableOpacity>
-                            <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
+                            <AntDesign name="right" size={RFValue(16,580)} color="black"></AntDesign>
                         </TouchableOpacity>
                     </View>
                     <Text style={style.title}>App Management</Text>
                     <View style={[style.itemcontainer,{borderBottomColor:'#DADADA',borderBottomWidth:1}]}>
                         <Text style={style.itemtitle}>Notification</Text>
                         <TouchableOpacity>
-                            <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
+                            <AntDesign name="right" size={RFValue(16,580)} color="black"></AntDesign>
                         </TouchableOpacity>
                     </View>
                     <View style={style.itemcontainer}>
@@ -39,29 +40,29 @@ export default function Setting({navigation})
                         <View style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
                             <Text style={style.value}>Active</Text>
                             <TouchableOpacity style={{marginLeft:15}} onPress={()=>navigation.navigate('MemberShip')}>
-                                <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
+                                <AntDesign name="right" size={RFValue(16,580)} color="black"></AntDesign>
                             </TouchableOpacity>
                         </View>
                     </View>
                     <View style={style.itemcontainer}>
                         <Text style={style.itemtitle}>App Connect</Text>
-                        <Switch trackColor={{true:"#1FCC79"}} thumbColor="#1FCC79" value={true}/>
+                        <Switch trackColor={{true:"#999"}} thumbColor="#1FCC79" value={data.connect} onValueChange={value=>setdata({...data,connect:value})}/>
                     </View>
                     <Text style={[style.title,{marginTop:41}]}>Other</Text>
                     <View style={[style.itemcontainer,{borderBottomColor:'#DADADA',borderBottomWidth:1}]}>
                         <Text style={style.itemtitle}>Download</Text>
-                        <Switch trackColor={{true:"#1FCC79"}} thumbColor="#1FCC79" value={true}/>
+                        <Switch trackColor={{true:"#999"}} thumbColor="#1FCC79" value={data.download} onValueChange={value=>setdata({...data,download:value})}/>
                     </View>
                     <View style={[style.itemcontainer,{borderBottomColor:'#DADADA',borderBottomWidth:1}]}>
                         <Text style={style.itemtitle}>Motion Detect</Text>
-                        <Switch trackColor={{true:"#1FCC79"}} thumbColor="#1FCC79" value={true}/>
+                        <Switch trackColor={{true:"#999"}} thumbColor="#1FCC79" value={data.motion} onValueChange={value=>setdata({...data,motion:value})}/>
                     </View>
                     <View style={style.itemcontainer}>
                         <Text style={style.itemtitle}>Wi-fi</Text>
                         <View style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
                             <Text style={style.value}>Home</Text>
                             <TouchableOpacity style={{marginLeft:15}}>
-                                <AntDesign name="right" size={RFValue(16,500)} color="black"></AntDesign>
+                                <AntDesign name="right" size={RFValue(16,580)} color="black"></AntDesign>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -84,7 +85,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     profiletext:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'Avenir Medium',
         fontWeight:'500'
@@ -99,7 +100,7 @@ const style = StyleSheet.create({
         marginTop:19,
         marginBottom:12,
         color:'#979797',
-        fontSize:RFValue(14,500),
+        fontSize:RFValue(14,580),
         fontFamily:'AvenirLTStd-Book'
     },
     itemcontainer:{
@@ -115,12 +116,12 @@ const style = StyleSheet.create({
     },
     itemtitle:{
         fontFamily:'Avenir Heavy',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         color:'black'
     },
     value:{
         color:'#BABABA',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Heavy'
     }
 })

@@ -24,18 +24,21 @@ export default function Notification({navigation})
                 <Image source={require('../assets/images/profile.png')} style={{width:32,height:32}}></Image>
             </View>
             <View style={style.divider}></View>
-            <DropdownPicker
-                style={{marginTop:20,display:'flex',borderColor:'white',width:wp('40'),marginLeft:13}} 
-                searchable={false}
-                open={open} 
-                value={value} 
-                multiple={false}
-                containerStyle={{borderColor:'white',display:'flex',marginBottom:15}}
-                labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,500)}}
-                items={[{label:'All Camera',value:'all'},{label:'Camera1',value:'camear1'}]} 
-                setOpen={setopen} 
-                onChangeValue={(value)=>setvalue(value)}
-            ></DropdownPicker>
+            <View style={{marginTop:20,width:wp('40'),minHeight:40,zIndex:99999}}>
+                <DropdownPicker
+                    style={{display:'flex',borderColor:'white',marginLeft:13,height:40}} 
+                    searchable={false}
+                    open={open} 
+                    value={value} 
+                    multiple={false}
+                    listItemContainerStyle={{display:'flex'}}
+                    containerStyle={{borderColor:'white',display:'flex',height:40}}
+                    labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,580)}}
+                    items={[{label:'All Camera',value:'all'},{label:'Camera1',value:'camera1'}]} 
+                    setOpen={setopen} 
+                    onChangeValue={(value)=>setvalue(value)}
+                ></DropdownPicker>
+            </View>
            <FlatList
                 data={data}
                 keyExtractor={(item,index)=>index + ""}
@@ -62,7 +65,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     profiletext:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'Avenir Medium',
         fontWeight:'500',

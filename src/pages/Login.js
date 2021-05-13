@@ -1,16 +1,12 @@
 import React from 'react'
 import {View,StyleSheet,TouchableOpacity,Text,SafeAreaView,TextInput,Image,ScrollView} from 'react-native'
-import Entypo from 'react-native-vector-icons/Entypo'
-import {widthPercentageToDP as wp,heightPercentageToDP as hp} from 'react-native-responsive-screen'
+import {BoxShadow} from 'react-native-shadow'
 import {RFValue} from 'react-native-responsive-fontsize'
 import Fontiso from 'react-native-vector-icons/Fontisto'
 export default function Login({navigation})
 {
     return (
         <SafeAreaView style={style.container}>
-            <View>
-                <TouchableOpacity><Entypo name="chevron-left" size={RFValue(24,500)}></Entypo></TouchableOpacity>
-            </View>
             <ScrollView style={style.content} showsVerticalScrollIndicator={false}>
                 <View>
                     <Text style={style.title}>Welcome,</Text>
@@ -37,12 +33,12 @@ export default function Login({navigation})
                     </TouchableOpacity>
                     <View style={style.descriptionsignin}>
                         <View style={style.descriptionside}></View>
-                        <Text style={[style.description,{marginLeft:15,marginRight:15,fontSize:RFValue(13,500)}]}>Or sign In with</Text>
+                        <Text style={[style.description,{marginLeft:15,marginRight:15,fontSize:RFValue(13,580)}]}>Or sign In with</Text>
                         <View style={style.descriptionside}></View>
                     </View>
                     <View style={style.containerflex}>
                         <TouchableOpacity style={[style.socialbtn,{justifyContent:'flex-end',backgroundColor:'#3B5998',marginRight:45}]}>
-                            <Fontiso name="facebook" color="white" size={30}></Fontiso>
+                            <Fontiso name="facebook" color="white" size={38}></Fontiso>
                         </TouchableOpacity>
                         <TouchableOpacity style={[style.socialbtn,{justifyContent:'center',backgroundColor:'white'}]}>
                             <Image source={require('../assets/icons/super-g.png')} style={{width:20,height:20}}></Image>
@@ -76,13 +72,13 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(25,500),
+        fontSize:RFValue(25,580),
         fontWeight:'800'
     },
     description:{
         fontFamily:'AvenirLTStd-Book',
         color:'#BABABA',
-        fontSize:RFValue(15,500)
+        fontSize:RFValue(15,580)
     },
     textinput:{
         backgroundColor:'#FBFBFD',
@@ -99,7 +95,7 @@ const style = StyleSheet.create({
         marginTop:20
     },
     label:{
-        fontSize:RFValue(9,500),
+        fontSize:RFValue(9,580),
         color:'#BABABA',
         fontFamily:'SFProDisplay-Semibold'
     },
@@ -111,20 +107,20 @@ const style = StyleSheet.create({
     },
     input:{
         flex:1,
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Heavy',
         color:'#676767',
         padding:0,
         marginRight:15
     },
     icon:{
-        width:RFValue(15,500),
-        height:RFValue(15,500)
+        width:RFValue(15,580),
+        height:RFValue(15,580)
     },
     forgot:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontWeight:'800'
     },
     btncontainer:{
@@ -135,7 +131,7 @@ const style = StyleSheet.create({
     },
     btntext:{
         fontFamily:'SFProDisplay-Semibold',
-        fontSize:RFValue(17,500),
+        fontSize:RFValue(17,580),
         color:'white'
     },
     descriptionsignin:{
@@ -156,13 +152,14 @@ const style = StyleSheet.create({
         borderRadius:24,
         display:'flex',
         alignItems:'center',
-        shadowColor:'rgba(66, 76, 112, 0.09)',
+        shadowOpacity:0.09,
+        shadowColor:'rgb(66, 76, 112)',
         shadowOffset:{
-            width:0,
-            height:14
+            width:48,
+            height:48
         },
         shadowRadius:20,
-        elevation:1
+        elevation:3
     },
     containerflex:{
         display:'flex',
@@ -171,7 +168,7 @@ const style = StyleSheet.create({
         marginTop:44
     },
     signuptext:{
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontFamily:'AvenirLTStd-Roman'
     }
 })

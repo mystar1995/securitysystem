@@ -39,7 +39,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     profiletext:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'Avenir Medium',
         fontWeight:'500',

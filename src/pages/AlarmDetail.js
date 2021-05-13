@@ -9,7 +9,7 @@ export default function AlarmDetail({navigation})
         <View style={style.container}>
             <View>
                 <TouchableOpacity onPress={()=>navigation.goBack()}>
-                    <Entypo name="chevron-left" size={RFValue(24,500)} color="#2F2F2F"></Entypo>
+                    <Entypo name="chevron-left" size={RFValue(24,580)} color="#2F2F2F"></Entypo>
                 </TouchableOpacity>
             </View>
             <View style={style.content}>
@@ -54,20 +54,20 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:RFValue(20,500),
+        fontSize:RFValue(20,580),
         color:'black',
         fontFamily:'Avenir Medium'
     },
     action:{
         color:'#E50914',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Medium',
         marginTop:10
     },
     time:{
         fontFamily:'AvenirLTStd-Book',
         color:'#979797',
-        fontSize:RFValue(14,500),
+        fontSize:RFValue(14,580),
         marginTop:10
     },
     actioncontainer:{
@@ -84,7 +84,7 @@ const style = StyleSheet.create({
     },
     btntext:{
         color:'white',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Medium'
     }
 })

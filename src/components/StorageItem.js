@@ -32,12 +32,12 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'Avenir Heavy',
         color:'black',
-        fontSize:RFValue(15,500)
+        fontSize:RFValue(15,580)
     },
     time:{
         fontFamily:'AvenirLTStd-Book',
         color:'#979797',
-        fontSize:RFValue(11,500),
+        fontSize:RFValue(11,580),
         marginTop:5
     },
     play:{
@@ -46,8 +46,8 @@ const style = StyleSheet.create({
         position:'absolute'
     },
     icon:{
-        width:RFValue(8,500),
-        height:RFValue(8,500),
+        width:RFValue(8,580),
+        height:RFValue(8,580),
         borderRadius:8,
         position:'absolute',
         top:16,

@@ -1,14 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {View,StyleSheet,TouchableOpacity,Text,SafeAreaView,TextInput,Image,ScrollView} from 'react-native'
 import Entypo from 'react-native-vector-icons/Entypo'
 import {RFValue} from 'react-native-responsive-fontsize'
 import Fontiso from 'react-native-vector-icons/Fontisto'
+import DropdownPicker from 'react-native-dropdown-picker'
 export default function Signup({navigation})
 {
+    const [open,setopen] = useState(false)
+
     return (
         <SafeAreaView style={style.container}>
             <View>
-                <TouchableOpacity onPress={()=>navigation.goBack()}><Entypo name="chevron-left" size={RFValue(24,500)}></Entypo></TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.goBack()}><Entypo name="chevron-left" size={RFValue(24,580)}></Entypo></TouchableOpacity>
             </View>
             <ScrollView style={style.content} showsVerticalScrollIndicator={false}>
                 <View style={{flex:1}}>
@@ -19,6 +22,27 @@ export default function Signup({navigation})
                         <View style={style.inputcontainer}>
                             <TextInput style={style.input} placeholderTextColor="#676767" defaultValue="steven.neff23@gmail.com"></TextInput>
                             <Image source={require('../assets/icons/bx-mail-send.svg.png')} style={style.icon}></Image>
+                        </View>
+                    </View>
+                    <View style={[style.textinput,{marginTop:54}]}>
+                        <Text style={style.label}>Country</Text>
+                        <View style={style.inputcontainer}>
+                            <View style={{width:150}}>
+                                <DropdownPicker
+                                    open={open}
+                                    searchable={false}
+                                    setOpen={(value)=>setopen(value)}
+                                    items={[{label:"Us (+1)",value:'+1',icon:()=><Image source={require('../assets/icons/usa.png')} style={{width:20,height:15}}></Image>}]}
+                                    value="+1"
+                                    style={{borderColor:'white',backgroundColor:'transparent',display:'flex',width:125}}
+                                    arrowIconStyle={{display:'none'}}
+                                    labelStyle={{fontFamily:'Avenir Heavy',fontSize:RFValue(15,580),color:'#676767'}}
+                                    containerStyle={{display:'flex',justifyContent:'center',flexDirection:'row',width:125,height:40}}
+                                ></DropdownPicker>
+                            </View>
+                            
+                            <TextInput style={[style.input,{marginLeft:0}]} placeholderTextColor="#676767" defaultValue=""></TextInput>
+                            <Image source={require('../assets/icons/bxl-facebook.svg.png')} style={style.icon}></Image>
                         </View>
                     </View>
                     <View style={[style.textinput,{marginTop:54}]}>
@@ -36,7 +60,7 @@ export default function Signup({navigation})
                     </TouchableOpacity>
                     <View style={style.descriptionsignin}>
                         <View style={style.descriptionside}></View>
-                        <Text style={[style.description,{marginLeft:15,marginRight:15,fontSize:RFValue(13,500),textAlign:'center'}]}>Or sign Up{'\n'}with</Text>
+                        <Text style={[style.description,{marginLeft:15,marginRight:15,fontSize:RFValue(13,580),textAlign:'center'}]}>Or sign Up{'\n'}with</Text>
                         <View style={style.descriptionside}></View>
                     </View>
                     <View style={style.containerflex}>
@@ -75,13 +99,13 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(25,500),
+        fontSize:RFValue(25,580),
         fontWeight:'800'
     },
     description:{
         fontFamily:'AvenirLTStd-Book',
         color:'#BABABA',
-        fontSize:RFValue(15,500)
+        fontSize:RFValue(15,580)
     },
     textinput:{
         backgroundColor:'#FBFBFD',
@@ -98,7 +122,7 @@ const style = StyleSheet.create({
         marginTop:20
     },
     label:{
-        fontSize:RFValue(9,500),
+        fontSize:RFValue(9,580),
         color:'#BABABA',
         fontFamily:'SFProDisplay-Semibold'
     },
@@ -110,20 +134,20 @@ const style = StyleSheet.create({
     },
     input:{
         flex:1,
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Heavy',
         color:'#676767',
         padding:0,
         marginRight:15
     },
     icon:{
-        width:RFValue(15,500),
-        height:RFValue(15,500)
+        width:15,
+        height:15
     },
     forgot:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontWeight:'800'
     },
     btncontainer:{
@@ -134,7 +158,7 @@ const style = StyleSheet.create({
     },
     btntext:{
         fontFamily:'SFProDisplay-Semibold',
-        fontSize:RFValue(17,500),
+        fontSize:RFValue(17,580),
         color:'white'
     },
     descriptionsignin:{
@@ -161,7 +185,7 @@ const style = StyleSheet.create({
             height:14
         },
         shadowRadius:20,
-        elevation:1
+        elevation:3
     },
     containerflex:{
         display:'flex',
@@ -170,7 +194,7 @@ const style = StyleSheet.create({
         marginTop:44
     },
     signuptext:{
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontFamily:'AvenirLTStd-Roman'
     }
 })

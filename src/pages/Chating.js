@@ -18,24 +18,24 @@ export default function Charting({navigation})
             <View style={style.header}>
                 <View style={style.headerleft}>
                     <TouchableOpacity onPress={()=>navigation.goBack()}>
-                        <Entypo name="chevron-left" size={RFValue(24,500)} color="#424347"></Entypo>
+                        <Entypo name="chevron-left" size={RFValue(24,580)} color="#424347"></Entypo>
                     </TouchableOpacity>
                     <Image source={require('../assets/images/profile1.png')} style={{width:wp('8'),height:wp('8'),borderRadius:6}}></Image>
                     <Text style={style.title}>Kristin</Text>
                 </View>
                 <TouchableOpacity>
-                    <Feather name="more-horizontal" color="#424347" size={RFValue(24,500)}></Feather>
+                    <Feather name="more-horizontal" color="#424347" size={RFValue(24,580)}></Feather>
                 </TouchableOpacity>
             </View>
             <View style={style.content}>
                 <ChatContent data={messages}></ChatContent>
                 <View style={style.inputcontainer}>
                     <TouchableOpacity>
-                        <Entypo name="attachment" size={RFValue(20,500)} color="black"></Entypo>
+                        <Entypo name="attachment" size={RFValue(20,580)} color="black"></Entypo>
                     </TouchableOpacity>
                     <TextInput style={style.input} placeholder="Type your message" placeholderTextColor="#BBB"></TextInput>
                     <TouchableOpacity>
-                        <Feather name="send" size={RFValue(20,500)} color="black"></Feather>
+                        <Feather name="send" size={RFValue(20,580)} color="black"></Feather>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -75,7 +75,7 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'SFProDisplay-Semibold',
         color:'#424347',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         marginLeft:10,
         fontWeight:'600'
     },
@@ -100,6 +100,6 @@ const style = StyleSheet.create({
         color:'black',
         marginLeft:9,
         marginRight:9,
-        fontSize:RFValue(13,500)
+        fontSize:RFValue(13,580)
     }
 })

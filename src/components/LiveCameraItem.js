@@ -26,7 +26,7 @@ export default function LiveCameraItem({title,image,navigation})
 
 const style = StyleSheet.create({
     title:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'AvenirLTStd-Book'
     },
@@ -37,8 +37,8 @@ const style = StyleSheet.create({
         marginLeft:13
     },  
     badge:{
-        width:RFValue(7,500),
-        height:RFValue(7,500),
+        width:RFValue(7,580),
+        height:RFValue(7,580),
         borderRadius:7,
         backgroundColor:'#26F35D',
         marginLeft:3
@@ -66,6 +66,6 @@ const style = StyleSheet.create({
     btntext:{
         fontFamily:'AvenirLTStd-Book',
         color:'white',
-        fontSize:RFValue(12,500)
+        fontSize:RFValue(12,580)
     }
 })

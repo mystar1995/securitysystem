@@ -14,7 +14,7 @@ export default function AddDevice({navigation})
         <View style={style.container}>
             <View style={style.header}>
                 <TouchableOpacity style={{marginRight:6}} onPress={()=>navigation.goBack()}>
-                    <Entypo name="chevron-left" color="#2F2F2F" size={RFValue(24,500)}></Entypo>
+                    <Entypo name="chevron-left" color="#2F2F2F" size={RFValue(24,580)}></Entypo>
                 </TouchableOpacity>
                 <Text style={style.title}>Add Device</Text>
             </View>
@@ -67,10 +67,10 @@ export default function AddDevice({navigation})
                             searchable={false}
                             open={open.model}
                             setOpen={(open)=>setopen({...open,model:open})}
-                            style={{borderColor:'white',padding:0}}
+                            style={{borderColor:'white',padding:0,height:40}}
                             items={[{label:'IPC-HDW4431C-A',value:'IPC'}]}
                             labelStyle={style.dropdown}
-                            containerStyle={{padding:0}}
+                            containerStyle={{padding:0,height:40}}
                             value="IPC"
                         ></Dropdown>
                     </View>
@@ -101,7 +101,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'#2F2F2F',
         fontFamily:'Avenir Medium'
     },
@@ -114,12 +114,14 @@ const style = StyleSheet.create({
         padding:16,
         paddingTop:8,
         paddingBottom:8,
-        marginTop:12
+        marginTop:12,
+        zIndex:99999,
+        minHeight:40
     },
     label:{
         fontFamily:'SFProDisplay-Semibold',
         color:'#BABABA',
-        fontSize:RFValue(9,500)
+        fontSize:RFValue(9,580)
     },
     labelcontainer:{
         display:'flex',
@@ -130,7 +132,7 @@ const style = StyleSheet.create({
     },
     input:{
         fontFamily:'Avenir Heavy',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         color:'#BABABA',
         borderColor:'white',
         padding:0
@@ -138,11 +140,11 @@ const style = StyleSheet.create({
     error:{
         fontFamily:'SFProDisplay-Semibold',
         color:'#E50914',
-        fontSize:RFValue(9,500)
+        fontSize:RFValue(9,580)
     },
     dropdown:{
         color:'#BABABA',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Heavy',
         padding:0
     },

@@ -8,7 +8,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 export default function Tabbar({navigation,state})
 {
     const {index} = state
-    console.log('index',index)
     return (
         <SafeAreaView>
             <View style={style.container}>

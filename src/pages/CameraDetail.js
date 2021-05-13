@@ -13,7 +13,7 @@ export default function CameraDetail({navigation})
             <View style={style.header}>
                 <View style={style.headerleft}>
                     <TouchableOpacity onPress={()=>navigation.goBack()}>
-                        <Entypo name="chevron-left" size={RFValue(24,500)} color="#2F2F2F"></Entypo>
+                        <Entypo name="chevron-left" size={RFValue(24,580)} color="#2F2F2F"></Entypo>
                     </TouchableOpacity>
                     <Text style={style.title}>Redroom</Text>
                 </View>
@@ -33,11 +33,11 @@ export default function CameraDetail({navigation})
                 <View style={style.content}>
                     <View style={style.actioncontainer}>
                         <TouchableOpacity style={[style.actionitem,{borderRightWidth:1,borderRightColor:'#979797'}]}>
-                            <IonIcons name="ios-location-outline" color="#2F2F2F" size={RFValue(32,500)}></IonIcons>
+                            <IonIcons name="ios-location-outline" color="#2F2F2F" size={RFValue(32,580)}></IonIcons>
                             <Text style={style.actiontext}>Auto Location</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={style.actionitem} onPress={()=>navigation.navigate('ScreenControl')}>
-                            <IonIcons name="image-outline" color="#2F2F2F" size={RFValue(32,500)}></IonIcons>
+                            <IonIcons name="image-outline" color="#2F2F2F" size={RFValue(32,580)}></IonIcons>
                             <Text style={style.actiontext}>Screen Control</Text>
                         </TouchableOpacity>
                     </View>
@@ -120,7 +120,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'#2F2F2F',
         fontWeight:'500',
         fontFamily:'Avenir Medium',
@@ -141,7 +141,7 @@ const style = StyleSheet.create({
     actiontext:{
         marginTop:6,
         fontFamily:'Avenir Medium',
-        fontSize:RFValue(12,500),
+        fontSize:RFValue(12,580),
         color:'#2F2F2F'
     },
     cameracontent:{

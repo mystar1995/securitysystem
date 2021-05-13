@@ -41,9 +41,9 @@ export default function Chat({navigation})
             <View style={style.content}>
                 <Text style={style.title}>Conversations</Text>
                 <View style={style.inputcontainer}>
-                    <AntDesign name="search1" color="#BBBBBB" size={RFValue(13,500)}></AntDesign>
+                    <AntDesign name="search1" color="#BBBBBB" size={RFValue(13,580)}></AntDesign>
                     <TextInput placeholder="Search" placeholderTextColor="rgba(187, 187, 187, 0.6)" style={style.input}></TextInput>
-                    <FontAwesome5 name="microphone" color="#BBBBBB" size={RFValue(16,500)}></FontAwesome5>
+                    <FontAwesome5 name="microphone" color="#BBBBBB" size={RFValue(16,580)}></FontAwesome5>
                 </View>
                 <FlatList
                     data={messages}
@@ -60,7 +60,7 @@ export default function Chat({navigation})
 const style = StyleSheet.create({
     container:{
         flex:1,
-        padding:19,
+        padding:24,
         backgroundColor:'white'
     },
     header:{
@@ -70,7 +70,7 @@ const style = StyleSheet.create({
         justifyContent:'space-between'
     },
     profiletext:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'Avenir Medium',
         fontWeight:'500'
@@ -88,7 +88,7 @@ const style = StyleSheet.create({
     title:{
         color:'#424347',
         fontFamily:'SFProDisplay-Semibold',
-        fontSize:RFValue(14,500)
+        fontSize:RFValue(14,580)
     },
     inputcontainer:{
         padding:11,
@@ -102,7 +102,7 @@ const style = StyleSheet.create({
     input:{
         flex:1,
         color:'rgba(187, 187, 187, 0.6)',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         padding:0,
         paddingLeft:5,
         fontFamily:'SFProDisplay-Regular'

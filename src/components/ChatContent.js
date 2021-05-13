@@ -41,7 +41,7 @@ const style = StyleSheet.create({
     date:{
         fontFamily:'SFProDisplay-Regular',
         color:'#BBB',
-        fontSize:RFValue(11,500),
+        fontSize:RFValue(11,580),
         marginLeft:15,
         marginRight:15
     }

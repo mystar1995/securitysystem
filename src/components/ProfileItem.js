@@ -26,7 +26,7 @@ const style = StyleSheet.create({
     name:{
         fontFamily:'SFProDisplay-Semibold',
         color:'#424347',
-        fontSize:RFValue(10,500),
+        fontSize:RFValue(10,580),
         marginTop:8
     }
 })

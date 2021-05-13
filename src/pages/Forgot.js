@@ -9,7 +9,7 @@ export default function Forgot({navigation})
     return (
         <SafeAreaView style={style.container}>
             <View>
-                <TouchableOpacity onPress={()=>navigation.goBack()}><Entypo name="chevron-left" size={RFValue(24,500)}></Entypo></TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.goBack()}><Entypo name="chevron-left" size={RFValue(24,580)}></Entypo></TouchableOpacity>
             </View>
             <ScrollView style={style.content} showsVerticalScrollIndicator={false}>
                 <View style={{flex:1}}>
@@ -47,13 +47,13 @@ const style = StyleSheet.create({
     title:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(25,500),
+        fontSize:RFValue(25,580),
         fontWeight:'800'
     },
     description:{
         fontFamily:'AvenirLTStd-Book',
         color:'#BABABA',
-        fontSize:RFValue(15,500)
+        fontSize:RFValue(15,580)
     },
     textinput:{
         backgroundColor:'#FBFBFD',
@@ -70,7 +70,7 @@ const style = StyleSheet.create({
         marginTop:20
     },
     label:{
-        fontSize:RFValue(9,500),
+        fontSize:RFValue(9,580),
         color:'#BABABA',
         fontFamily:'SFProDisplay-Semibold'
     },
@@ -82,20 +82,20 @@ const style = StyleSheet.create({
     },
     input:{
         flex:1,
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         fontFamily:'Avenir Heavy',
         color:'#676767',
         padding:0,
         marginRight:15
     },
     icon:{
-        width:RFValue(15,500),
-        height:RFValue(15,500)
+        width:RFValue(15,580),
+        height:RFValue(15,580)
     },
     forgot:{
         fontFamily:'Avenir Heavy',
         color:'#E50914',
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontWeight:'800'
     },
     btncontainer:{
@@ -106,7 +106,7 @@ const style = StyleSheet.create({
     },
     btntext:{
         fontFamily:'SFProDisplay-Semibold',
-        fontSize:RFValue(17,500),
+        fontSize:RFValue(17,580),
         color:'white'
     },
     descriptionsignin:{
@@ -142,7 +142,7 @@ const style = StyleSheet.create({
         marginTop:44
     },
     signuptext:{
-        fontSize:RFValue(13,500),
+        fontSize:RFValue(13,580),
         fontFamily:'AvenirLTStd-Roman'
     }
 })

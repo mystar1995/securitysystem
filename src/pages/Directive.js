@@ -25,29 +25,30 @@ export default function Directive()
             </View>
             <View style={style.divider}></View>
             <View style={{display:'flex',alignItems:'center',flexDirection:'row',marginTop:10}}>
-                <View>
+                <View style={{minHeight:30,zIndex:99999}}>
                     <DropdownPicker
-                        style={{display:'flex',borderColor:'white',width:wp('35'),marginLeft:13}} 
+                        style={{display:'flex',borderColor:'white',width:wp('35'),marginLeft:13,height:40}} 
                         searchable={false}
                         open={open.camera} 
                         value={value.camera} 
+                        listItemContainerStyle={{zIndex:10000}}
                         multiple={false}
-                        containerStyle={{borderColor:'white',display:'flex',marginBottom:15}}
-                        labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,500)}}
+                        containerStyle={{borderColor:'white',display:'flex'}}
+                        labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,580)}}
                         items={[{label:'All Camera',value:'all'},{label:'Camera1',value:'camear1'}]} 
                         setOpen={(toggle)=>setopen({...open,camera:toggle})} 
                         onChangeValue={(item)=>setvalue({...value,camera:item})}
                     ></DropdownPicker>
                 </View>
-                <View>
+                <View style={{minHeight:30,zIndex:99999}}>
                     <DropdownPicker
                         style={{display:'flex',borderColor:'white',width:wp('30'),marginLeft:13}} 
                         searchable={false}
                         open={open.type} 
                         value={value.type} 
                         multiple={false}
-                        containerStyle={{borderColor:'white',display:'flex',marginBottom:15}}
-                        labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,500),color:'black'}}
+                        containerStyle={{borderColor:'white',display:'flex'}}
+                        labelStyle={{fontFamily:'AvenirLTStd-Book',fontSize:RFValue(14,580),color:'black'}}
                         items={[{label:'All Type',value:'all'}]} 
                         setOpen={(toggle)=>setopen({...open,type:toggle})} 
                         onChangeValue={(item)=>setvalue({...value,type:item})}
@@ -83,7 +84,7 @@ const style = StyleSheet.create({
         justifyContent:'space-between'
     },
     profiletext:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'black',
         fontFamily:'Avenir Medium',
         fontWeight:'500',

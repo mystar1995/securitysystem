@@ -13,7 +13,7 @@ export default function ScreenControl({navigation})
             <View style={style.header}>
                 <View style={style.headerleft}>
                     <TouchableOpacity onPress={()=>navigation.goBack()}>
-                        <Entypo name="chevron-left" size={RFValue(24,500)} color="#2F2F2F"></Entypo>
+                        <Entypo name="chevron-left" size={RFValue(24,580)} color="#2F2F2F"></Entypo>
                     </TouchableOpacity>
                     <Text style={style.title}>Screen Control</Text>
                 </View>
@@ -69,7 +69,7 @@ export default function ScreenControl({navigation})
                             minimumTrackTintColor="#DADADA"
                         ></Slider>
                         <TouchableOpacity>
-                            <IonIcons name="refresh" color="#2F2F2F" size={RFValue(20,500)}></IonIcons>
+                            <IonIcons name="refresh" color="#2F2F2F" size={RFValue(20,580)}></IonIcons>
                         </TouchableOpacity>
                     </View>
                     <View style={[style.actioncontainer,{marginTop:42}]}>
@@ -84,7 +84,7 @@ export default function ScreenControl({navigation})
                             minimumTrackTintColor="#DADADA"
                         ></Slider>
                         <TouchableOpacity>
-                            <IonIcons name="refresh" color="#2F2F2F" size={RFValue(20,500)}></IonIcons>
+                            <IonIcons name="refresh" color="#2F2F2F" size={RFValue(20,580)}></IonIcons>
                         </TouchableOpacity>
                     </View>
                     <View style={[style.actioncontainer,{marginTop:60}]}>
@@ -136,7 +136,7 @@ const style = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:RFValue(18,500),
+        fontSize:RFValue(18,580),
         color:'#2F2F2F',
         fontWeight:'500',
         fontFamily:'Avenir Medium',
@@ -157,7 +157,7 @@ const style = StyleSheet.create({
     actiontext:{
         marginTop:6,
         fontFamily:'Avenir Medium',
-        fontSize:RFValue(12,500),
+        fontSize:RFValue(12,580),
         color:'#2F2F2F'
     },
     cameracontent:{
@@ -188,7 +188,7 @@ const style = StyleSheet.create({
     },
     btntext:{
         fontFamily:'Avenir Medium',
-        fontSize:RFValue(15,500),
+        fontSize:RFValue(15,580),
         color:'white'
     }
 })
